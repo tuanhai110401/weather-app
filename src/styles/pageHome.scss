@@ -1,0 +1,214 @@
+$my-image-path: '../assets/home_bg.png';
+
+.home-title {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.home-desc {
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
+    margin: 24px;
+}
+
+.home-header {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.hero-wrapper {
+    height: 100vh;
+    background: url($my-image-path);
+    background-size: 100% 190%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: space-around;
+    color: #000;
+
+    .hero-content {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .hero-title {
+            font-size: 62px;
+            font-weight: 400;
+
+        }
+
+        .hero-desc {
+            display: none;
+            font-size: 18px;
+            margin-left: 36px;
+        }
+
+        .hero-btn {
+            width: max-content;
+            display: inline-block;
+            width: 200px;
+            background-color: var(--primary);
+            padding: 12px 0;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            margin-top: 24px;
+
+            .icon {
+                font-size: 28px;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .hero-weather {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+
+
+    }
+}
+
+
+.about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 158px 0;
+    margin: 0 76px;
+    position: relative;
+
+    .about-info {
+        width: 40%;
+
+        .info-title {
+            font-size: 38px;
+            padding: 24px 0;
+        }
+
+        .info-desc {
+            letter-spacing: 1.5px;
+            font-size: 18px;
+            line-height: 1.4;
+            font-weight: 300;
+        }
+
+        .about-btn {
+            font-size: 22;
+            font-weight: 600;
+            margin-top: 24px;
+            padding: 12px 48px;
+            border-radius: 24px;
+            color: #fff;
+            background-color: var(--primary);
+        }
+    }
+
+    .about-image {
+
+        img {
+            height: 700px;
+            border-radius: 48px;
+        }
+    }
+
+    .weather {
+        img {
+            height: 500px;
+            border-radius: 48px;
+        }
+    }
+
+    .about-card {
+        position: absolute;
+        bottom: 10%;
+        right: 36%;
+    }
+}
+
+.wrapper-reverse {
+    flex-direction: row-reverse;
+
+}
+
+.forecast {
+    margin: 0 76px;
+
+
+
+    .countries-wrapper {
+        display: flex;
+        gap: 36px;
+        flex-wrap: wrap;
+
+        .country {
+            width: 260px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 36px;
+            border: 1px solid #dedede;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+
+            .country_container {
+                display: flex;
+                align-items: center;
+
+                .flag {
+                    height: 30px;
+                    width: 30px;
+                    margin-right: 12px;
+                }
+            }
+
+            .country-icon {
+                margin-left: 32px;
+            }
+
+        }
+    }
+}
+
+.contact-wrapper {
+    padding: 158px 76px;
+
+    .wrapper {
+        background-color: var(--primary);
+        padding: 48px;
+        border-radius: 32px;
+        color: #fff;
+
+        .contact-form {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: row;
+
+            .contact-input {
+                width: 80%;
+                font-size: 36px;
+            }
+
+            .contact-btn {
+                width: 20%;
+                border: 2px solid #fff;
+                border-radius: 48px;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+    }
+}

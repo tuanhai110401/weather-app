@@ -1,0 +1,52 @@
+.chart {
+    flex: 4;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 24px;
+
+    .chartGrid {
+        stroke: rgb(228, 225, 225);
+    }
+
+    .color {
+        color: #3498db;
+        color: #409AC7;
+    }
+
+    .custom-tooltip {
+        background-color: #778899;
+        // overflow: hidden;
+        height: 160px;
+        width: 280px;
+        padding: 24px;
+        border-radius: 24px;
+        display: flex;
+        justify-content: space-between;
+
+        .img-chart {
+
+            img {
+                height: 80px;
+                margin-top: -18px;
+            }
+
+            .label-chart {
+                text-align: center;
+                margin-top: -4px;
+            }
+        }
+    }
+
+    .label-chart {
+        margin: 8px 0;
+        color: #fff;
+        font-weight: 600;
+
+        .icon-chart {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: -4px;
+            margin-right: 4px;
+        }
+    }
+}

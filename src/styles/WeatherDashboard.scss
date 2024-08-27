@@ -1,0 +1,112 @@
+.dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #EFF3F9;
+    color: #000;
+
+    .nav {
+        width: 14%;
+        border-top-right-radius: 24px;
+        border-end-end-radius: 24px;
+        background-color: #fff;
+
+        .header-wrapper {
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+
+            .nav-wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .container-dashboard {
+        width: 86%;
+        background-color: #EFF3F9;
+
+        .search-dashboard {
+            // height: 120px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 36px;
+            padding: 24px;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+
+
+            .search-input {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                input {
+                    background-color: #EFF3F9;
+                    border: none;
+                    width: 540px;
+                    height: 42px;
+                    font-size: 19px;
+                    outline: none;
+                    padding: 10px;
+                    // padding: 2px;
+
+                    &:focus-visible {
+                        border: none;
+                    }
+
+                }
+
+                .search-suggest {
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    min-height: 92px;
+                    max-height: 294px;
+                    background-color: #fff;
+                    z-index: 9999;
+                    padding: 24px;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                    border-bottom-right-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    overflow-y: auto;
+                    scrollbar-width: thin;
+
+                    .search-item {
+                        width: 100%;
+                        margin-bottom: 4px;
+                        font-size: 18px;
+                        padding: 8px;
+                        border-radius: 8px;
+
+                        .search-icon {
+                            font-size: 20px;
+                            margin-right: 12px;
+                            margin-bottom: -4px;
+                        }
+
+                        &:hover {
+                            background-color: #EFF3F9;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .search-action {
+                display: flex;
+            }
+        }
+
+        .content-dashboard {
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #409AC7 transparent;
+        }
+
+    }
+}

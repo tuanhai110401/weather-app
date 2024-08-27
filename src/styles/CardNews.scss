@@ -1,0 +1,21 @@
+.new-wrapper {
+    padding: 158px 76px;
+
+    .new-cards {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.card-news {
+
+    box-shadow: none !important;
+
+    .card-img {
+        border-radius: 24px;
+    }
+
+    .card-title {
+        padding: 24px 0;
+    }
+}
