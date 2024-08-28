@@ -32,7 +32,6 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
 
     setDateCurrent(getDate());
   }, []);
-  const dateString = "2024-08-21T17:00:00";
   const getTime = (date) => {
     const parts = date.split("T");
     const time = parts[1].substring(0, 8);
