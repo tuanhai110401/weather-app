@@ -43,7 +43,7 @@ function CardInforWearther({ data, title }) {
     justifyContent: "space-between",
     alignItems: "center",
     height: "90px",
-    width: "460px",
+    width: "410px",
     backgroundColor: "#fff",
     borderRadius: "12px",
     boxShadow:
