@@ -44,6 +44,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
   };
   return (
     <Carousel
+      className="weather-carousel"
       responsive={responsive}
       autoPlay
       autoPlaySpeed={2000}
@@ -65,7 +66,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
                 justifyContent: "space-between",
                 color: "black",
                 height: "180px",
-                width: "190px",
+                width: "180px",
                 backgroundColor: "#fff",
                 borderRadius: "12px",
                 p: "12px 12px",

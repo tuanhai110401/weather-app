@@ -18,7 +18,7 @@ function Forecast({ dataForecast }) {
         overflowY: "auto",
         overflowX: "hidden",
         scrollbarWidth: "none",
-        height: "80%",
+        height: "74%",
       }}
     >
       {dataForecast &&
@@ -46,7 +46,7 @@ function Forecast({ dataForecast }) {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                height: "120px",
+                height: "100px",
                 width: "100%",
                 backgroundColor: "#3498db",
                 borderRadius: "12px",
