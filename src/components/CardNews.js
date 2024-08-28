@@ -9,7 +9,7 @@ import imageCelendar from "../assets/post1.jpg";
 function CardNews({ dataPost }) {
   return (
     dataPost && (
-      <Card sx={{ maxWidth: 460 }} className="card-news">
+      <Card sx={{ width: "30%" }} className="card-news">
         <CardActionArea>
           <CardMedia
             className="card-img"
@@ -19,7 +19,7 @@ function CardNews({ dataPost }) {
             alt="card new"
           />
           <CardContent>
-            <Typography variant="h4" component="div" className="card-title">
+            <Typography variant="h5" component="div" className="card-title">
               {dataPost.title}
             </Typography>
             <Typography variant="body2" color="text.secondary">

@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import "../../styles/About.scss";
 import imageAbout from "../../assets/sunny.jpg";
 import imageAbout2 from "../../assets/about-2.jpg";
-import imageAbout3 from "../../assets/about-3.jpg";
+import imageAbout3 from "../../assets/about-6.jpg";
 import imageAbout4 from "../../assets/about-4.jpg";
 import imageAbout5 from "../../assets/about-5.jpg";
 import Footer from "../../components/Footer";
@@ -23,7 +23,7 @@ function About() {
         </p>
       </div>
       <div className="about-container">
-        <div className="flex-7-3 about-intro">
+        <div className="about-intro flex-7-3">
           <h4 className="f-7">
             We providing quick and accurate information
             <IoSunny className="about_icon" />
@@ -34,12 +34,10 @@ function About() {
           </p>
         </div>
 
-        <div className="flex-7-3">
-          <img
-            className="about_result-image f-7"
-            src={imageAbout}
-            alt="about"
-          />
+        <div className="flex-7-3 about_result ">
+          <div className="f-7">
+            <img className="about_result-image" src={imageAbout} alt="about" />
+          </div>
           <div className="f-3 about_result-lists">
             <div className="result-item">
               <h2>15+</h2>
@@ -51,21 +49,29 @@ function About() {
             </div>
             <div className="result-item">
               <h2>100%</h2>
-              <h5>Client satisfaction rate</h5>
+              <h5>Satisfaction rate</h5>
             </div>
           </div>
         </div>
         <div className="about_img-lists">
           <div className="flex-7-3 about_img-item">
-            <img className="f-7 " src={imageAbout2} alt="about" />
-            <img className="f-3 " src={imageAbout5} alt="about" />
+            <div className="f-7 ">
+              <img src={imageAbout2} alt="about" />
+            </div>
+            <div className="f-3 ">
+              <img src={imageAbout5} alt="about" />
+            </div>
           </div>
           <div
             className="flex-7-3 about_img-item"
             style={{ flexDirection: "row-reverse" }}
           >
-            <img className="f-7 " src={imageAbout4} alt="about" />
-            <img className="f-3 " src={imageAbout3} alt="about" />
+            <div className="f-7">
+              <img src={imageAbout4} alt="about" />
+            </div>
+            <div className="f-3">
+              <img src={imageAbout3} alt="about" />
+            </div>
           </div>
         </div>
 

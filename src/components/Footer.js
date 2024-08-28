@@ -9,6 +9,7 @@ function Footer() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          width: "100%",
         }}
       >
         <Box
@@ -29,7 +30,10 @@ function Footer() {
           >
             <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
               <Typography
-                sx={{ fontSize: "36px", padding: "12px 0" }}
+                sx={{
+                  fontSize: "36px",
+                  padding: "12px 0",
+                }}
                 fontWeight={600}
               >
                 Weather<span className="footer-logo">Hub</span>
@@ -39,7 +43,6 @@ function Footer() {
           <Box
             sx={{
               display: { xs: "flex", sm: "flex" },
-              gap: 3,
               marginTop: "24px",
             }}
             className="footer-action"

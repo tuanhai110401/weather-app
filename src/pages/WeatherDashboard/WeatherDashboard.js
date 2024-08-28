@@ -287,6 +287,7 @@ function WeatherDashboard() {
                   width: "100%",
                   flexWrap: "wrap",
                   gap: "38px",
+                  justifyContent: "space-around",
                 }}
               >
                 <CardInforWearther
@@ -343,7 +344,7 @@ function WeatherDashboard() {
             >
               <Typography
                 sx={{
-                  fontSize: "24px",
+                  fontSize: "22px",
                   fontWeight: "400",
                   p: "24px",
                 }}

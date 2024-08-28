@@ -90,7 +90,7 @@ function Home() {
       placeId: "francescas-3017375",
     },
     {
-      name: "New Zealand",
+      name: "N.Zealand",
       image: "https://flagcdn.com/nz.svg",
       placeId: "new-plymouth",
     },
@@ -124,7 +124,7 @@ function Home() {
     navigate(`/dashboard/${placeID}`);
   };
   return (
-    <div>
+    <>
       <div className="home-header">
         <Header />
       </div>
@@ -146,130 +146,127 @@ function Home() {
           <CardWeather data={dataCardWeather[0]} />
         </div>
       </div>
+      <div className="home-wrapper">
+        <section className="about-wrapper mb mt">
+          <div className="about-info">
+            <h4 className="home-title">
+              Your #1 source of any weather forecasts and updates.
+            </h4>
+            <p className="home-desc">
+              Stay updated of any weather changes with WeahterHub. <br />
+              <br />
+              We are an expert team specializing on everything that concerns
+              weather data. Since 2010, our website has been providing accurate
+              and detailed weather forecasts available on any device.
+            </p>
+          </div>
+          <div className="about-image">
+            <img src={imageCelendar} alt="celendar" />
+          </div>
+        </section>
 
-      <section className="about-wrapper">
-        <div className="about-info">
-          <h4 className="home-title">
-            Your #1 source of any weather forecasts and updates.
-          </h4>
-          <p className="home-desc">
-            Stay updated of any weather changes with WeahterHub. <br />
-            <br />
-            We are an expert team specializing on everything that concerns
-            weather data. Since 2010, our website has been providing accurate
-            and detailed weather forecasts available on any device.
-          </p>
-        </div>
-        <div className="about-image">
-          <img src={imageCelendar} alt="celendar" />
-        </div>
-      </section>
-
-      <section className="forecast">
-        <h5 className="home-title">World weather forecast</h5>
-        <p className="home-desc">Please select a country</p>
-        <div className="countries-wrapper">
-          {dataCountries.map((item, index) => (
-            <div
-              key={index}
-              className="country"
-              style={styleButton}
-              onClick={() => handleWeatherCountry(item.placeId)}
-            >
-              <div className="country_container">
-                <img className="flag" src={item.image} />
-                <span>{item.name}</span>
+        <section className="forecast mb">
+          <h5 className="home-title">World weather forecast</h5>
+          <p className="home-desc">Please select a country</p>
+          <div className="countries-wrapper">
+            {dataCountries.map((item, index) => (
+              <div
+                key={index}
+                className="country"
+                style={styleButton}
+                onClick={() => handleWeatherCountry(item.placeId)}
+              >
+                <div className="country_container">
+                  <img className="flag" src={item.image} />
+                  <span>{item.name}</span>
+                </div>
+                <MdOutlineDoubleArrow className="country-icon" />
               </div>
-              <MdOutlineDoubleArrow className="country-icon" />
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="new-wrapper">
-        <h4 className="home-title">Weather forecast news</h4>
-        <p className="home-desc">
-          Get the best weather news from our team of meteorologists and learn
-          how the weather changes the lives all over the globe.
-        </p>
-        <div className="new-cards">
-          {dataNews.map((item, index) => (
-            <CardNews key={index} dataPost={item} />
-          ))}
-        </div>
-      </section>
-
-      <section className="about-wrapper">
-        <div className="about-info">
-          <h4 className="home-title">Avoid weather surprises</h4>
+            ))}
+          </div>
+        </section>
+        <section className="new-wrapper mb">
+          <h4 className="home-title">Weather forecast news</h4>
           <p className="home-desc">
-            WeatherHub provides a road trip planner tool with accurate weather
-            forecast information to optimize travel plans.
-            <br />
-            <br />
-            A successful road trip requires careful planning to ensure travelers
-            can enjoy a fun and safe journey. A road trip planner with weather
-            is an essential tool to help with this planning. This tool provides
-            up-to-date weather information for any given route.
-            <br />
-            <br />
-            It allows travelers to make informed decisions about their travel
-            plans at any given time.
+            Get the best weather news from our team of meteorologists and learn
+            how the weather changes the lives all over the globe.
           </p>
-        </div>
-        <div className="about-image weather">
-          <img src={imageUsa} alt="florida" />
-        </div>
-        <div className="about-card">
-          <CardWeather data={dataCardWeather[1]} />
-        </div>
-      </section>
+          <div className="new-cards">
+            {dataNews.map((item, index) => (
+              <CardNews key={index} dataPost={item} />
+            ))}
+          </div>
+        </section>
 
-      <section className="about-wrapper wrapper-reverse">
-        <div className="about-info">
-          <h4 className="home-title">Avoid weather surprises</h4>
-          <p className="home-desc">
-            WeatherHub partners with national weather services and qualified
-            meteorologists to bring you accurate forecasts for any location. We
-            help people understand the impact of weather, make the best
-            decisions, and plan their day in advance.
-            <br />
-            <br />
-            On our website, you can expect highly accurate weather forecasts
-            that provide actionable weather insights and increase your safety.
-          </p>
-          <Button className="about-btn">READ OUR STORY</Button>
-        </div>
-        <div className="about-image weather">
-          <img src={imageThunder} alt="thunder" />
-        </div>
-      </section>
+        <section className="about-wrapper mb">
+          <div className="about-info">
+            <h4 className="home-title">Avoid weather surprises</h4>
+            <p className="home-desc">
+              WeatherHub provides a road trip planner tool with accurate weather
+              forecast information to optimize travel plans.
+              <br />
+              <br />
+              A successful road trip requires careful planning to ensure
+              travelers can enjoy a fun and safe journey. A road trip planner
+              with weather is an essential tool to help with this planning. This
+              tool provides up-to-date weather information for any given route.
+              <br />
+              <br />
+              It allows travelers to make informed decisions about their travel
+              plans at any given time.
+            </p>
+          </div>
+          <div className="about-image">
+            <img src={imageUsa} alt="florida" />
+          </div>
+        </section>
 
-      <section className="contact-wrapper">
-        <div className="wrapper">
-          <h5 className="home-title">Get the fresh weather forecast daily</h5>
-          <p className="home-desc" style={{ width: "50%" }}>
-            Subscribe to our newsletter to receive regular updates on the latest
-            weather insights, news, and tips to help you avoid any unwanted
-            risks and surprises during your day.
-          </p>
-          <FormControl variant="standard" className="contact-form">
-            <div className="contact-input">
-              <InputLabel htmlFor="component-helper" sx={{ color: "#fff" }}>
-                Email
-              </InputLabel>
-              <Input
-                id="component-helper"
-                aria-describedby="component-helper-text"
-                sx={{ fontSize: "32px", width: "90%", color: "#fff" }}
-              />
-            </div>
-            <Button className="contact-btn">Submit</Button>
-          </FormControl>
-        </div>
-      </section>
+        <section className="about-wrapper wrapper-reverse mb">
+          <div className="about-info">
+            <h4 className="home-title">Avoid weather surprises</h4>
+            <p className="home-desc">
+              WeatherHub partners with national weather services and qualified
+              meteorologists to bring you accurate forecasts for any location.
+              We help people understand the impact of weather, make the best
+              decisions, and plan their day in advance.
+              <br />
+              <br />
+              On our website, you can expect highly accurate weather forecasts
+              that provide actionable weather insights and increase your safety.
+            </p>
+            <Button className="about-btn">READ OUR STORY</Button>
+          </div>
+          <div className="about-image weather">
+            <img src={imageThunder} alt="thunder" />
+          </div>
+        </section>
 
+        <section className="contact-wrapper mb">
+          <div className="wrapper">
+            <h5 className="home-title">Get the fresh weather forecast daily</h5>
+            <p className="home-desc" style={{ width: "50%" }}>
+              Subscribe to our newsletter to receive regular updates on the
+              latest weather insights, news, and tips to help you avoid any
+              unwanted risks and surprises during your day.
+            </p>
+            <FormControl variant="standard" className="contact-form">
+              <div className="contact-input">
+                <InputLabel htmlFor="component-helper" sx={{ color: "#fff" }}>
+                  Email
+                </InputLabel>
+                <Input
+                  id="component-helper"
+                  aria-describedby="component-helper-text"
+                  sx={{ fontSize: "32px", width: "90%", color: "#fff" }}
+                />
+              </div>
+              <Button className="contact-btn">Submit</Button>
+            </FormControl>
+          </div>
+        </section>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

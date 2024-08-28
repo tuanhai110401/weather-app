@@ -34,7 +34,6 @@ $my-image-path: '../assets/city-florida.jpg';
                 padding: 12px;
                 font-weight: 500;
                 font-size: 20px;
-                // color: #07074d;
                 margin-bottom: 12px;
                 border-radius: 24px;
                 resize: vertical;
@@ -67,6 +66,8 @@ $my-image-path: '../assets/city-florida.jpg';
 
             img {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
 
             }
         }
@@ -75,4 +76,45 @@ $my-image-path: '../assets/city-florida.jpg';
 
 .contact-mb {
     margin-bottom: 36px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 0 6%;
+
+        .contact_title {
+            font-size: 36px;
+        }
+
+        .contact-form-wrapper {
+            flex-direction: column;
+            gap: 12px;
+
+            .contact-form {
+                width: 100%;
+                padding: 12px;
+
+                .contact-form-input {
+                    &.input-mess {
+                        height: 160px;
+                    }
+                }
+            }
+
+            .contact-img {
+                width: 100%;
+                height: 280px;
+            }
+        }
+    }
+
+    .contact-mb {
+        margin-bottom: 12px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact-container {
+        margin: 0 6%;
+    }
 }

@@ -28,7 +28,6 @@
         background-color: #EFF3F9;
 
         .search-dashboard {
-            // height: 120px;
             background-color: #fff;
             display: flex;
             justify-content: space-between;
@@ -38,11 +37,19 @@
             border-bottom-left-radius: 24px;
             border-bottom-right-radius: 24px;
 
+            .search-title {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
 
             .search-input {
                 display: flex;
                 align-items: center;
                 position: relative;
+                max-width: 460px;
 
                 input {
                     background-color: #EFF3F9;
@@ -111,6 +118,10 @@
 
         .react-multi-carousel-track {
             gap: 36px;
+
+            .react-multi-carousel-item {
+                width: 33%;
+            }
         }
 
     }

@@ -46,7 +46,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
     <Carousel
       className="weather-carousel"
       responsive={responsive}
-      autoPlay
+      // autoPlay
       autoPlaySpeed={2000}
       customTransition="all 1s linear"
       infinite
@@ -66,7 +66,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
                 justifyContent: "space-between",
                 color: "black",
                 height: "180px",
-                width: "180px",
+                width: "100%",
                 backgroundColor: "#fff",
                 borderRadius: "12px",
                 p: "12px 12px",
@@ -91,6 +91,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
                     style={{
                       display: "block",
                       height: "98px",
+                      marginLeft: "-18px",
                     }}
                     src={getIcon(item.icon)}
                     alt="weather"
@@ -99,22 +100,22 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
 
                 <Typography
                   sx={{
-                    width: "38%",
-                    fontSize: "42px",
+                    width: "40%",
+                    fontSize: "32px",
                     fontWeight: "400",
                     position: "relative",
                     p: 0,
                   }}
                 >
-                  {Math.round(item.temperature)}
-                  <WiDegrees
+                  {Math.round(item.temperature)}°C
+                  {/* <WiDegrees
                     style={{
                       fontSize: "120px",
                       position: "absolute",
                       top: "-20%",
                       left: "0",
                     }}
-                  />
+                  /> */}
                 </Typography>
               </Box>
 

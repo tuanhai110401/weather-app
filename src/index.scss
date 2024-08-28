@@ -24,12 +24,23 @@ code {
     monospace;
 }
 
-.dark {
-  background-color: var(--black);
-  color: var(--white);
+/* Mobile styles */
+@media (max-width: 480px) {
+  body {
+    background-color: lightblue;
+  }
 }
 
-.light {
-  background-color: var(--white);
-  color: var(--black);
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Laptop styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-color: lightcoral;
+  }
 }
