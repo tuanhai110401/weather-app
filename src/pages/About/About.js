@@ -1,5 +1,8 @@
 import { IoSunny } from "react-icons/io5";
 import { MdArrowForwardIos } from "react-icons/md";
+import AOS from "aos";
+import { useEffect } from "react";
+
 import Header from "../../components/Header";
 import "../../styles/About.scss";
 import imageAbout from "../../assets/sunny.jpg";
@@ -9,6 +12,9 @@ import imageAbout4 from "../../assets/about-4.jpg";
 import imageAbout5 from "../../assets/about-5.jpg";
 import Footer from "../../components/Footer";
 function About() {
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
   return (
     <>
       <div className="home-header">
@@ -23,7 +29,7 @@ function About() {
         </p>
       </div>
       <div className="about-container">
-        <div className="about-intro flex-7-3">
+        <div className="about-intro flex-7-3" data-aos="zoom-out-up">
           <h4 className="f-7">
             We providing quick and accurate information
             <IoSunny className="about_icon" />
@@ -35,10 +41,10 @@ function About() {
         </div>
 
         <div className="flex-7-3 about_result ">
-          <div className="f-7">
+          <div className="f-7" data-aos="fade-right">
             <img className="about_result-image" src={imageAbout} alt="about" />
           </div>
-          <div className="f-3 about_result-lists">
+          <div className="f-3 about_result-lists" data-aos="fade-left">
             <div className="result-item">
               <h2>15+</h2>
               <h5>Years of experience</h5>
@@ -55,10 +61,10 @@ function About() {
         </div>
         <div className="about_img-lists">
           <div className="flex-7-3 about_img-item">
-            <div className="f-7 ">
+            <div className="f-7 " data-aos="fade-right">
               <img src={imageAbout2} alt="about" />
             </div>
-            <div className="f-3 ">
+            <div className="f-3" data-aos="fade-left">
               <img src={imageAbout5} alt="about" />
             </div>
           </div>
@@ -66,16 +72,16 @@ function About() {
             className="flex-7-3 about_img-item"
             style={{ flexDirection: "row-reverse" }}
           >
-            <div className="f-7">
+            <div className="f-7" data-aos="fade-left">
               <img src={imageAbout4} alt="about" />
             </div>
-            <div className="f-3">
+            <div className="f-3" data-aos="fade-right">
               <img src={imageAbout3} alt="about" />
             </div>
           </div>
         </div>
 
-        <div className="flex-7-3 about_core">
+        <div className="flex-7-3 about_core" data-aos="zoom-in-up">
           <div className="f-7 core_content">
             <h4>Our core vision</h4>
             <p>

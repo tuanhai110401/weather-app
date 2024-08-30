@@ -7,6 +7,9 @@ import {
 } from "@mui/material";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { MdOutlineDoubleArrow } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import { useEffect } from "react";
 
 import imageCelendar from "../../assets/celendar.png";
 import imageUsa from "../../assets/city-florida.jpg";
@@ -16,7 +19,6 @@ import CardNews from "../../components/CardNews";
 import CardWeather from "../../components/CardWeather";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { useNavigate } from "react-router-dom";
 import imgPost1 from "../../assets/post1.jpg";
 import imgPost2 from "../../assets/post2.png";
 import imgPost3 from "../../assets/post3.png";
@@ -29,6 +31,9 @@ function Home() {
     color: textColor,
     backgroundColor: backgroundColor,
   };
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
   const dataCardWeather = [
     {
       country: "Ha Noi",
@@ -144,7 +149,7 @@ function Home() {
       </div>
       <div className="home-wrapper">
         <section className="about-wrapper mb mt">
-          <div className="about-info">
+          <div data-aos="fade-down-right" className="about-info">
             <h4 className="home-title">
               Your #1 source of any weather forecasts and updates.
             </h4>
@@ -156,12 +161,12 @@ function Home() {
               and detailed weather forecasts available on any device.
             </p>
           </div>
-          <div className="about-image">
+          <div data-aos="fade-left" className="about-image">
             <img src={imageCelendar} alt="celendar" />
           </div>
         </section>
 
-        <section className="forecast mb">
+        <section className="forecast mb" data-aos="zoom-in">
           <h5 className="home-title">World weather forecast</h5>
           <p className="home-desc">Please select a country</p>
           <div className="countries-wrapper">
@@ -181,7 +186,7 @@ function Home() {
             ))}
           </div>
         </section>
-        <section className="new-wrapper mb">
+        <section className="new-wrapper mb" data-aos="zoom-out-down">
           <h4 className="home-title">Weather forecast news</h4>
           <p className="home-desc">
             Get the best weather news from our team of meteorologists and learn
@@ -195,7 +200,7 @@ function Home() {
         </section>
 
         <section className="about-wrapper mb">
-          <div className="about-info">
+          <div className="about-info" data-aos="fade-right">
             <h4 className="home-title">Avoid weather surprises</h4>
             <p className="home-desc">
               WeatherHub provides a road trip planner tool with accurate weather
@@ -212,13 +217,13 @@ function Home() {
               plans at any given time.
             </p>
           </div>
-          <div className="about-image">
+          <div className="about-image" data-aos="fade-left">
             <img src={imageUsa} alt="florida" />
           </div>
         </section>
 
         <section className="about-wrapper wrapper-reverse mb">
-          <div className="about-info">
+          <div className="about-info" data-aos="fade-right">
             <h4 className="home-title">Avoid weather surprises</h4>
             <p className="home-desc">
               WeatherHub partners with national weather services and qualified
@@ -232,12 +237,12 @@ function Home() {
             </p>
             <Button className="about-btn">READ OUR STORY</Button>
           </div>
-          <div className="about-image weather">
+          <div className="about-image weather" data-aos="fade-left">
             <img src={imageThunder} alt="thunder" />
           </div>
         </section>
 
-        <section className="contact-wrapper mb">
+        <section className="contact-wrapper mb" data-aos="zoom-in">
           <div className="wrapper">
             <h5 className="home-title">Get the fresh weather forecast daily</h5>
             <p className="home-desc" style={{ width: "50%" }}>

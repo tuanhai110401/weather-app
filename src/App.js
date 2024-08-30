@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "./App.scss";
 import { routes } from "./routers/router";
 import { NavProvider } from "./hooks/useNav";
-
+import "aos/dist/aos.css";
 function App() {
   const theme = useTheme();
   const style = {
