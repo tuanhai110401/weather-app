@@ -54,7 +54,7 @@
                 input {
                     background-color: #EFF3F9;
                     border: none;
-                    width: 540px;
+                    width: 80%;
                     height: 42px;
                     font-size: 19px;
                     outline: none;
@@ -124,5 +124,175 @@
             }
         }
 
+    }
+}
+
+/* Laptop styles */
+@media (max-width: 1024px) {
+
+    .dashboard-wrapper {
+        .nav {
+            // width: 2%;
+            width: 0;
+
+            .header-menu {
+                display: block;
+                position: fixed;
+                top: 4%;
+                left: 1%;
+                z-index: 9999;
+            }
+
+            .header-wrapper {
+                display: none;
+            }
+
+            .open {
+                position: fixed;
+                left: 0%;
+                top: 0%;
+                width: 250px;
+                height: 100%;
+                transition: left 0.3s ease;
+                background-color: rgb(209, 251, 255);
+                z-index: 999;
+                border-top-right-radius: 32px;
+                border-bottom-right-radius: 32px;
+
+                .header-wrapper {
+                    display: block;
+
+                    .btn-theme {
+                        margin-left: 40%;
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+
+        .container-dashboard {
+            width: 100%;
+
+            .search-dashboard {
+                margin: 0 48px;
+            }
+
+            .weather-container {
+                margin: 24px;
+
+                .forecast-wrapper {
+                    padding: 18px;
+
+                    .forecast-title {
+                        font-size: 20px;
+                        padding: 0;
+                        margin-bottom: 12px;
+                    }
+
+                    .forecast-content {
+                        padding: 0;
+                        height: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+    .dashboard-wrapper {
+
+        .container-dashboard {
+
+            .search-dashboard {
+                .search-title {
+                    display: none;
+                }
+
+                .search-input {
+                    width: 80%;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .weather-container {
+                flex-direction: column;
+
+                .weather_card {
+                    width: 100%;
+                }
+
+                .forecast-wrapper {
+                    width: 100%;
+
+                    .forecast-content {
+                        height: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .dashboard-wrapper {
+
+        .container-dashboard {
+            .search-dashboard {
+                padding: 12px;
+            }
+
+            .weather-container {
+                flex-direction: column;
+
+                .weather_card {
+                    .weather_card-content {
+                        flex-direction: column;
+                        height: 500px;
+
+                        .card_content-main {
+                            width: 100%;
+                            height: 50%;
+
+                            .card_content-curr {
+                                height: 70%;
+
+                                img {
+                                    height: 100% !important;
+                                    width: 60% !important;
+                                }
+                            }
+
+                            .card_content-temp {
+                                margin-right: 12px;
+                            }
+
+                        }
+
+                        .carousel-wrapper {
+                            width: 100%;
+                        }
+                    }
+
+                    .weather_card-info {
+                        width: 100%;
+                    }
+                }
+
+                .forecast-wrapper {
+                    width: 100%;
+
+                    .forecast-content {
+                        height: 90%;
+                    }
+                }
+            }
+        }
     }
 }

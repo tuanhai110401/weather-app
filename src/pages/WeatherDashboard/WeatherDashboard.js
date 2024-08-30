@@ -153,7 +153,7 @@ function WeatherDashboard() {
             )}
           </div>
           <div className="search-action">
-            <IconButton sx={{ mr: 2 }}>
+            <IconButton>
               <CiBellOn />
             </IconButton>
             <DropMenu />
@@ -161,18 +161,20 @@ function WeatherDashboard() {
         </div>
         <div className="content-dashboard">
           <Box
+            className="weather-container"
             sx={{
               display: "flex",
+              justifyContent: "space-between",
               gap: "24px",
               m: "36px",
-              height: "540px",
             }}
           >
-            <Box sx={{ width: "70%" }}>
+            <Box className="weather_card" sx={{ width: "70%" }}>
               <Box
+                className="weather_card-content"
                 sx={{
                   display: "flex",
-                  height: "234px",
+                  height: "240px",
                   backgroundColor: "#3498db",
                   borderRadius: "24px",
                   boxShadow:
@@ -180,40 +182,55 @@ function WeatherDashboard() {
                 }}
               >
                 <Box
+                  className="card_content-main"
                   sx={{
-                    p: "24px",
-                    width: "34%",
+                    p: "24px 0",
+                    width: "38%",
                     textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
                   }}
                 >
                   {dataWeather &&
                     !dataWeather.detail &&
                     dataWeather.current && (
-                      <img
-                        style={{ height: "180px", marginTop: "-48px" }}
-                        src={
-                          dataWeather &&
-                          !dataWeather.detail &&
-                          getIcon(dataWeather.current.icon_num)
-                        }
-                        alt="weather"
-                      />
+                      <Box
+                        className="card_content-curr"
+                        sx={{ width: "100%", height: "50%" }}
+                      >
+                        <img
+                          style={{
+                            height: "100%",
+                            width: "70%",
+                            objectFit: "cover",
+                          }}
+                          src={
+                            dataWeather &&
+                            !dataWeather.detail &&
+                            getIcon(dataWeather.current.icon_num)
+                          }
+                          alt="weather"
+                        />
+                      </Box>
                     )}
                   <Box
                     sx={{
                       display: "flex",
                       justifyContent: "space-between",
+                      alignItems: "center",
                       color: "#fff",
-                      mt: "-36px",
                     }}
                   >
                     <Box
                       sx={{
+                        width: "70%",
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
                         alignItems: "start",
                         overflow: "hidden",
+                        ml: "24px",
                       }}
                     >
                       <Typography sx={{ fontSize: "20px", fontWeight: "600" }}>
@@ -229,39 +246,29 @@ function WeatherDashboard() {
                           </Typography>
                         )}
                     </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "end",
-                      }}
-                    >
+                    <Box sx={{}}>
                       {dataWeather &&
                         !dataWeather.detail &&
                         dataWeather.current && (
                           <Typography
+                            className="card_content-temp"
                             sx={{
-                              fontSize: "72px",
+                              fontSize: "62px",
                               fontWeight: "400",
-                              position: "relative",
+                              lineHeight: "0",
                             }}
                           >
-                            {Math.round(dataWeather.current.temperature)}
-                            <WiDegrees
-                              style={{
-                                fontSize: "150px",
-                                position: "absolute",
-                                top: "-8%",
-                                left: "22%",
-                              }}
-                            />
+                            {Math.round(dataWeather.current.temperature) + "°"}
                           </Typography>
                         )}
                     </Box>
                   </Box>
                 </Box>
 
-                <Box sx={{ p: "24px", width: "66%" }}>
+                <Box
+                  className="carousel-wrapper"
+                  sx={{ p: "24px", width: "66%" }}
+                >
                   {dataWeather &&
                     !dataWeather.detail &&
                     dataWeather.current &&
@@ -283,10 +290,8 @@ function WeatherDashboard() {
               <Box
                 sx={{
                   display: "flex",
-                  height: "220px",
                   width: "100%",
                   flexWrap: "wrap",
-                  gap: "38px",
                   justifyContent: "space-around",
                 }}
               >
@@ -322,7 +327,7 @@ function WeatherDashboard() {
                 />
                 <CardInforWearther
                   type="INFO"
-                  title="Wind direction"
+                  title="Direction"
                   data={
                     dataWeather &&
                     !dataWeather.detail &&
@@ -334,15 +339,18 @@ function WeatherDashboard() {
             </Box>
 
             <Box
+              className="forecast-wrapper"
               sx={{
                 backgroundColor: "#fff",
                 width: "30%",
+                height: "510px",
                 borderRadius: "24px",
                 boxShadow:
                   "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;",
               }}
             >
               <Typography
+                className="forecast-title"
                 sx={{
                   fontSize: "22px",
                   fontWeight: "400",

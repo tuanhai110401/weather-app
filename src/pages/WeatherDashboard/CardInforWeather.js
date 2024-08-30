@@ -17,7 +17,7 @@ function CardInforWearther({ data, title }) {
       image: "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/windsock.svg",
     },
     {
-      title: "Wind direction",
+      title: "Direction",
       image:
         "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind-onshore.svg",
     },
@@ -42,22 +42,23 @@ function CardInforWearther({ data, title }) {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    height: "90px",
-    width: "46%",
+    width: "48%",
+    minWidth: "250px",
     backgroundColor: "#fff",
     borderRadius: "12px",
     boxShadow:
       "rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;",
+    marginBottom: "12px",
   };
   return (
     data && (
-      <Box sx={styleInfoWeahter}>
+      <Box className="weather_card-info" sx={styleInfoWeahter}>
         <Box
           sx={{
             display: "flex",
-            alignContent: "center",
-            alignItems: "center",
             height: "100%",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
           <img
@@ -80,23 +81,13 @@ function CardInforWearther({ data, title }) {
         <Box>
           <Typography
             sx={{
-              fontSize: "22px",
+              fontSize: "18px",
               fontWeight: "500",
-              position: "relative",
-              p: 4,
+              paddingRight: "12px",
             }}
           >
             {data}
-            {title === "Temperature" && (
-              <WiDegrees
-                style={{
-                  fontSize: "90px",
-                  position: "absolute",
-                  top: "18%",
-                  left: "28%",
-                }}
-              />
-            )}
+            {title === "Temperature" && "°C"}
           </Typography>
         </Box>
       </Box>

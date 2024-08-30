@@ -1,6 +1,5 @@
 import Carousel from "react-multi-carousel";
 import { Box, Typography } from "@mui/material";
-import { WiDegrees } from "react-icons/wi";
 import { getIcon } from "../../assets/iconWeathers";
 import { useState, useEffect } from "react";
 
@@ -12,13 +11,18 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
       slidesToSlide: 1,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1100, min: 561 },
       items: 2,
       slidesToSlide: 1,
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
+    tableMini: {
+      breakpoint: { max: 560, min: 0 },
       items: 1,
+      slidesToSlide: 1,
+    },
+    mobile: {
+      breakpoint: { max: 480, min: 0 },
+      items: 2,
       slidesToSlide: 1,
     },
   };
@@ -65,8 +69,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
                 flexDirection: "column",
                 justifyContent: "space-between",
                 color: "black",
-                height: "180px",
-                width: "100%",
+                height: "190px",
                 backgroundColor: "#fff",
                 borderRadius: "12px",
                 p: "12px 12px",
@@ -74,24 +77,23 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
             >
               <Box
                 sx={{
+                  height: "50%",
                   display: "flex",
-                  alignContent: "center",
-                  justifyContent: "space-between",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
                 }}
               >
                 <Box
                   sx={{
-                    display: "flex",
-                    alignContent: "center",
-                    alignItems: "center",
-                    height: "60px",
+                    width: "60%",
                   }}
                 >
                   <img
                     style={{
-                      display: "block",
-                      height: "98px",
-                      marginLeft: "-18px",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "fill",
                     }}
                     src={getIcon(item.icon)}
                     alt="weather"
@@ -100,22 +102,12 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
 
                 <Typography
                   sx={{
-                    width: "40%",
+                    textAlign: "center",
                     fontSize: "32px",
                     fontWeight: "400",
-                    position: "relative",
-                    p: 0,
                   }}
                 >
-                  {Math.round(item.temperature)}°C
-                  {/* <WiDegrees
-                    style={{
-                      fontSize: "120px",
-                      position: "absolute",
-                      top: "-20%",
-                      left: "0",
-                    }}
-                  /> */}
+                  {Math.round(item.temperature) + "°"}
                 </Typography>
               </Box>
 
@@ -126,7 +118,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
                   {getTime(item.date)}
                 </Typography>
                 <Typography
-                  sx={{ color: "#929292", fontSize: "18px", fontWeight: "200" }}
+                  sx={{ color: "#929292", fontSize: "16px", fontWeight: "200" }}
                 >
                   {item.summary}
                 </Typography>

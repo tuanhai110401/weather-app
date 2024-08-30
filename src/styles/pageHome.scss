@@ -56,12 +56,6 @@ $my-image-path: '../assets/home_bg.png';
 
         }
 
-        .hero-desc {
-            display: none;
-            font-size: 18px;
-            margin-left: 36px;
-        }
-
         .hero-btn {
             width: max-content;
             display: inline-block;
@@ -143,7 +137,6 @@ $my-image-path: '../assets/home_bg.png';
 
 
     .forecast {
-        // margin: 0 76px;
 
         .countries-wrapper {
             display: flex;
@@ -182,9 +175,6 @@ $my-image-path: '../assets/home_bg.png';
                     }
                 }
 
-                .country-icon {
-                    // margin-left: 32px;
-                }
 
             }
         }
@@ -195,7 +185,6 @@ $my-image-path: '../assets/home_bg.png';
         .new-cards {
             display: flex;
             justify-content: space-around;
-            gap: 24px;
         }
     }
 
@@ -234,15 +223,211 @@ $my-image-path: '../assets/home_bg.png';
     }
 }
 
-/* Mobile styles */
-@media (max-width: 480px) {}
-
-/* Tablet styles */
-@media (min-width: 481px) and (max-width: 768px) {}
 
 /* Laptop styles */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .home-title {
-        color: red;
+        font-size: 32px;
     }
+
+    .hero-wrapper {
+        .hero-content {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-btn {
+                padding: 8px 0;
+            }
+        }
+
+        .hero-weather {
+            height: 50%;
+        }
+    }
+
+    .home-wrapper {
+        margin: 0 4%;
+
+        .about-wrapper {
+
+            .about-info {
+                .info-desc {
+                    font-size: 16px;
+                }
+            }
+
+            .about-image {
+                width: 46%;
+            }
+        }
+
+        .forecast {
+            .countries-wrapper {
+                gap: 18px;
+
+                .country {
+                    width: 22%;
+                }
+            }
+        }
+
+        .new-wrapper {
+            .new-cards {
+                gap: 12px;
+
+                .card-title {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .contact-wrapper {
+            .wrapper {
+                padding: 28px;
+            }
+        }
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 551px) and (max-width: 768px) {
+    .home-title {
+        font-size: 24px;
+    }
+
+    .home-desc {
+        font-size: 14px;
+    }
+
+    .hero-wrapper {
+        .hero-content {
+            .hero-title {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .home-wrapper {
+        .forecast {
+            .countries-wrapper {
+                .country {
+                    width: 32%;
+                }
+            }
+        }
+
+        .new-wrapper {
+            .new-cards {
+                flex-wrap: wrap;
+                justify-content: left;
+
+                .card-news {
+                    width: 48%;
+
+                    .card-title {
+                        font-size: 20px;
+                    }
+                }
+
+            }
+        }
+
+        .contact-wrapper {
+            .wrapper {
+                p {
+                    width: 80% !important;
+                }
+            }
+        }
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 550px) {
+
+
+    .home-title {
+        font-size: 24px;
+    }
+
+    .hero-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        .hero-content {
+            margin-top: 12px;
+            width: 70%;
+            text-align: center;
+            // align-items: center;
+
+            .hero-title {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .home-wrapper {
+
+        .about-wrapper {
+            flex-direction: column;
+
+            .about-info {
+                width: 100%;
+            }
+
+            .about-image {
+                width: 100%;
+            }
+        }
+
+        .forecast {
+            .countries-wrapper {
+                .country {
+                    width: 46%;
+                }
+            }
+        }
+
+        .new-wrapper {
+            .new-cards {
+                flex-wrap: wrap;
+                justify-content: left;
+
+                .card-news {
+                    width: 100%;
+
+                    .card-title {
+                        font-size: 20px;
+                    }
+                }
+
+            }
+        }
+
+        .wrapper-reverse {
+            flex-direction: column-reverse;
+
+        }
+
+        .contact-wrapper {
+            .wrapper {
+                p {
+                    width: 100% !important;
+                }
+
+                .contact-form {
+                    .contact-input {
+                        width: 70%;
+                    }
+
+                    .contact-btn {
+                        width: 30%;
+                        height: 36px;
+                    }
+                }
+            }
+        }
+    }
+
 }

@@ -133,10 +133,6 @@ function Home() {
           <h4 className="hero-title">
             Weather forecasts for thousands of locations around the world
           </h4>
-          <p className="hero-desc">
-            Stay ahead of the weather with our comprehensive forecasts for
-            locations worldwide. Plan your day, week or trip with confidence.
-          </p>
           <Button className="hero-btn">
             Get Started
             <IoIosArrowRoundForward className="icon" />

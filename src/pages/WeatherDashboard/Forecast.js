@@ -1,6 +1,6 @@
 import { Box, Typography, Tooltip } from "@mui/material";
-import { WiDegrees } from "react-icons/wi";
 import { getIcon } from "../../assets/iconWeathers";
+import { CiTempHigh } from "react-icons/ci";
 
 function Forecast({ dataForecast }) {
   function getDayOfWeek(dateString) {
@@ -13,12 +13,13 @@ function Forecast({ dataForecast }) {
   }
   return (
     <Box
+      className="forecast-content"
       sx={{
         p: "0 24px",
         overflowY: "auto",
         overflowX: "hidden",
         scrollbarWidth: "none",
-        height: "78%",
+        height: "70%",
       }}
     >
       {dataForecast &&
@@ -44,9 +45,9 @@ function Forecast({ dataForecast }) {
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "space-between",
+                justifyContent: "space-around",
+                flexWrap: "wrap",
                 alignItems: "center",
-                height: "90px",
                 width: "100%",
                 backgroundColor: "#3498db",
                 borderRadius: "12px",
@@ -59,19 +60,22 @@ function Forecast({ dataForecast }) {
                   display: "flex",
                   alignContent: "center",
                   alignItems: "center",
+                  width: "60%",
+                  minWidth: "180px",
                   height: "100%",
                 }}
               >
                 <img
                   style={{
                     display: "block",
-                    height: "86px",
+                    height: "76px",
                   }}
                   src={getIcon(item.icon)}
                 />
                 <Box>
                   <Typography
                     sx={{
+                      whiteSpace: "nowrap",
                       fontSize: "20px",
                       fontWeight: "600",
                     }}
@@ -81,34 +85,28 @@ function Forecast({ dataForecast }) {
 
                   <Typography
                     sx={{
+                      whiteSpace: "nowrap",
                       fontSize: "16px",
                       fontWeight: "300",
                     }}
                   >
-                    {`Temperature ${Math.round(
-                      item.all_day.temperature_min
-                    )}/${Math.round(item.all_day.temperature_max)} °C`}
+                    <CiTempHigh
+                      style={{ fontSize: "20px", marginBottom: "-4px" }}
+                    />
+                    {`${Math.round(item.all_day.temperature_min)}/${Math.round(
+                      item.all_day.temperature_max
+                    )} °C`}
                   </Typography>
                 </Box>
               </Box>
-              <Box>
+              <Box sx={{ width: "30%" }}>
                 <Typography
                   sx={{
                     fontSize: "26px",
                     fontWeight: "800",
-                    position: "relative",
-                    p: 4,
                   }}
                 >
-                  {Math.round(item.all_day.temperature)}
-                  <WiDegrees
-                    style={{
-                      fontSize: "90px",
-                      position: "absolute",
-                      top: "18%",
-                      left: "28%",
-                    }}
-                  />
+                  {Math.round(item.all_day.temperature)}°C
                 </Typography>
               </Box>
             </Box>
