@@ -162,7 +162,7 @@ function Home() {
             </p>
           </div>
           <div className="about-image">
-            <img src={imgPost2} alt="celendar" />
+            <img src={imgPost1} alt="celendar" />
           </div>
         </section>
 
