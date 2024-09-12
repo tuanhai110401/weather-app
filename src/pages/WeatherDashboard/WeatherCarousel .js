@@ -22,7 +22,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
     },
     mobile: {
       breakpoint: { max: 480, min: 0 },
-      items: 2,
+      items: 1,
       slidesToSlide: 1,
     },
   };
@@ -50,7 +50,7 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
     <Carousel
       className="weather-carousel"
       responsive={responsive}
-      // autoPlay
+      autoPlay
       autoPlaySpeed={2000}
       customTransition="all 1s linear"
       infinite
@@ -80,13 +80,14 @@ const WeatherCarousel = ({ dataHourlyWeather }) => {
                   height: "50%",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
+                  justifyContent: "space-between",
                   flexWrap: "wrap",
                 }}
               >
                 <Box
                   sx={{
                     width: "60%",
+                    height: "120px",
                   }}
                 >
                   <img

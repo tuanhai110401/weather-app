@@ -70,12 +70,12 @@ function ChartWeather({ dataHourlyWeather }) {
   };
   return (
     <div className="chart">
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <ResponsiveContainer width="100%" aspect={3 / 1}>
         <AreaChart
           width={730}
           height={250}
           data={dataChart}
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+          margin={{ top: 10, right: 0, left: -30, bottom: 0 }}
         >
           <defs>
             <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">

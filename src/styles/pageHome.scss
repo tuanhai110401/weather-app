@@ -310,6 +310,7 @@ $my-image-path: '../assets/home_bg.png';
     }
 
     .home-wrapper {
+
         .forecast {
             .countries-wrapper {
                 .country {
@@ -360,12 +361,14 @@ $my-image-path: '../assets/home_bg.png';
             margin-top: 12px;
             width: 70%;
             text-align: center;
-            // align-items: center;
+            align-items: center;
 
             .hero-title {
+                display: none;
                 font-size: 24px;
             }
         }
+
     }
 
     .home-wrapper {
