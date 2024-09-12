@@ -25,11 +25,11 @@ $my-image-path: '../assets/home_bg.png';
 }
 
 .mb {
-    margin-bottom: 160px;
+    margin-bottom: 80px;
 }
 
 .mt {
-    margin-top: 160px;
+    margin-top: 80px;
 }
 
 .hero-wrapper {
@@ -124,6 +124,7 @@ $my-image-path: '../assets/home_bg.png';
 
         .about-image {
             width: 40%;
+            height: 400px;
 
             img {
                 height: 100%;
