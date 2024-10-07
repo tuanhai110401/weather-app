@@ -244,15 +244,20 @@ function Home() {
 
         <section className="contact-wrapper mb">
           <div className="wrapper">
-            <h5 className="home-title">Get the fresh weather forecast daily</h5>
-            <p className="home-desc" style={{ width: "50%" }}>
+            <h5 className="home-title-banner">
+              Get the fresh weather forecast daily
+            </h5>
+            <p className="home-desc-banner" style={{ width: "50%" }}>
               Subscribe to our newsletter to receive regular updates on the
               latest weather insights, news, and tips to help you avoid any
               unwanted risks and surprises during your day.
             </p>
             <FormControl variant="standard" className="contact-form">
               <div className="contact-input">
-                <InputLabel htmlFor="component-helper" sx={{ color: "#fff" }}>
+                <InputLabel
+                  htmlFor="component-helper"
+                  sx={{ color: "#464646" }}
+                >
                   Email
                 </InputLabel>
                 <Input

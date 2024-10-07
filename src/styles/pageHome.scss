@@ -5,6 +5,22 @@ $my-image-path: '../assets/home_bg.png';
     font-weight: 400;
 }
 
+.home-title-banner {
+    font-size: 42px;
+    font-weight: 400;
+    color: #464646;
+}
+
+.home-desc-banner {
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 300;
+    margin: 24px;
+    color: #464646;
+
+}
+
 .home-desc {
     letter-spacing: 1.5px;
     font-size: 16px;
@@ -145,6 +161,7 @@ $my-image-path: '../assets/home_bg.png';
             flex-wrap: wrap;
             justify-content: center;
             overflow: hidden;
+            padding: 16px;
 
             .country {
                 width: 18%;
@@ -213,11 +230,15 @@ $my-image-path: '../assets/home_bg.png';
                 .contact-btn {
                     width: 20%;
                     height: 48px;
-                    border: 2px solid #fff;
+                    border: 2px solid #464646;
                     border-radius: 48px;
                     font-weight: 600;
-                    color: #fff;
+                    color: #464646;
                     margin-top: 12px;
+
+                    &:hover {
+                        border-color: #000000;
+                    }
                 }
             }
         }
